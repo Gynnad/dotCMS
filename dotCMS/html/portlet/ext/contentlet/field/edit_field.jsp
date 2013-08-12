@@ -64,6 +64,10 @@
 	max-height: 100% !important;
 	overflow: auto;
 }
+.classAce{
+	display: none;
+}
+</style>
 </style>
 <div class="fieldWrapper">
 
@@ -205,6 +209,7 @@
         }
 %>
     <div style="margin-bottom:20px;width:700px;overflow:visible;border:0px red solid">
+        <div id="aceEditor" class="classAce"></div>
         <textarea  <%= isReadOnly?"readonly=\"readonly\"":"" %>
             class="editWYSIWYGField" rows="7"
             name="<%=field.getFieldContentlet()%>"

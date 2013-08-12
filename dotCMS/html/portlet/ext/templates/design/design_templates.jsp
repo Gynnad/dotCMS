@@ -321,43 +321,14 @@
 
 <script src="/html/js/cms_ui_utils.js" type="text/javascript"></script>
 <script src="/html/js/template/utility-add-head-code.js" type="text/javascript"></script>
-<script src="/html/js/codemirror/js/codemirror.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 	dojo.addOnLoad(function() {
 		drawDefault(<%=overrideBody%>,'<%=LanguageUtil.get(pageContext, "Add-Container")%>','<%=LanguageUtil.get(pageContext, "Remove-Container")%>');
-		//setTimeout('codeMirrorArea()',1);
 		dojo.byId("titleField").focus(true);
 	});
 
-/*	var editor;
-	function codeMirrorArea(){
-		editor = CodeMirror.fromTextArea("headerField", {
-		    width: "95%",
-		    height:"100%",
-			parserfile: ["parsedummy.js","parsexml.js", "parsecss.js", "tokenizejavascript.js", "parsejavascript.js", "parsehtmlmixed.js"],
-			stylesheet: ["/html/js/codemirror/css/xmlcolors.css", "/html/js/codemirror/css/jscolors.css", "/html/js/codemirror/css/csscolors.css"],
-			path: "/html/js/codemirror/js/"
-		});
-	}
 
-	function codeMirrorColoration(){
-		dijit.byId("toggleEditor").disabled=true;
-		if (dijit.byId("toggleEditor").checked) {
-			codeMirrorArea();
-		} else {
-			var editorText = editor.getCode();
-			if (dojo.isIE) {
-    			var node = dojo.query('.CodeMirror-wrapping')[0];
-    			node.parentNode.removeChild(node);
-			} else {
-				dojo.query('.CodeMirror-wrapping')[0].remove();
-			}
-			dojo.query('#headerField').style({display:''})
-			dojo.query('#headerField')[0].value = editorText;
-		}
-		dijit.byId("toggleEditor").disabled=false;
-	}*/
 </script>
 
 
